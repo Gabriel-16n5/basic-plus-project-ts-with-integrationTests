@@ -10,7 +10,8 @@
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
     "test:load-envs": "dotenv -e .env.test jest",
-    "test:migration:run": "npm run test:load-envs prisma migrate deploy"
+    "test:migration:run": "npm run test:load-envs prisma migrate deploy",
+    "test": "npm run load:tests:envs jest"
   },
   "keywords": [],
   "author": "",
