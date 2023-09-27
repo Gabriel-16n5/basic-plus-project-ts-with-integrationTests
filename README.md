@@ -32,3 +32,13 @@ import supertest from "supertest";
 import app from "../src";
 
 const server = supertest(app);
+
+agora precisa separar o banco de development do de testes, para isso:
+npm i -D dotenv-cli
+após, criar o .env.test para o novo banco de tests, tem que mudar o nome do banco, provavelmente o .env principal vai se chamar = .env.development e o banco projeto_development e o de testes .env.test e o banco projeto_test
+precisa colocar no package.json nos escrips o seguinte:
+
+"test:load-envs": "dotenv -e .env.test jest",
+"test:migration:run": "npm run test:load-envs prisma migrate deploy"
+
+e rodar eles;
