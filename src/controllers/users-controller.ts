@@ -9,7 +9,7 @@ export async function  createUsers(req: Request, res: Response) {
         createUserr(body);
         res.sendStatus(httpStatus.CREATED);
       } catch (error) {
-        console.log(error);
+        
         res.sendStatus(httpStatus.BAD_REQUEST);
       }
 }
@@ -33,7 +33,7 @@ export async function deleteUsers (req: Request, res: Response) {
       deleteUser(userId);
       res.sendStatus(httpStatus.OK);
     } catch (error) {
-      console.log(error);
+      
       res.sendStatus(httpStatus.BAD_REQUEST);
     }
 }
@@ -44,7 +44,7 @@ export async function updateUsers (req: Request, res: Response) {
     updateUser(user);
     res.sendStatus(httpStatus.OK);
   } catch (error) {
-    console.log(error);
+    
     res.sendStatus(httpStatus.BAD_REQUEST);
   }
 }

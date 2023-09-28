@@ -18,14 +18,6 @@ export async function getUsersId(userId:number) {
     return user;
   }
   
-  export async function getUserId(userId:number) {
-    const uniqueUser = await prisma.users.findUnique({
-      where: {
-        userId
-      }
-    })
-    return uniqueUser;
-  }
 
   export async function getName(name:string) {
     const firstUserName = await prisma.users.findFirst({
