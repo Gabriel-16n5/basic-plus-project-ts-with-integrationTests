@@ -4,14 +4,14 @@ npm i -D jest ts-jest @types/jest typescript
 criar o arquivo de configurações jest.config.ts:
 
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-  moduleDirectories: ["node_modules", "src"],
-  transform: {
-    ".+\\.ts$": "ts-jest",
-  },
-  testMatch: ["<rootDir>/tests/*.(test|spec).ts"],
-};
+    preset: "ts-jest",
+    testEnvironment: "node",
+    moduleDirectories: ["node_modules", "src"],
+    transform: {
+      ".+\\.ts$": "ts-jest",
+    },
+    testMatch: ["<rootDir>/tests/*.(test|spec).ts"],
+  };
 
 arrumar o script de test do package.json para:
 
